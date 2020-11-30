@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+body, html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+body {
+  position: relative;
+  color: white;
+  background-color: #ca0828; }
+  body:before, body:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  body:before {
+    height: 480px;
+    background: linear-gradient(to bottom, #94081f 0%, #94081f 50%, #ca0828 100%); }
+  body:after {
+    height: 100%;
+    background-image: url(images/bg-footer.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto; }
+
+.site-header:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/bg-white.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto; }
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 320px;
+  height: 115px;
+  background-color: #ca0828; }
+  .header-title__link {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    display: block;
+    overflow: hidden;
+    height: 125px;
+    width: 176px;
+    max-width: 100%;
+    white-space: nowrap;
+    text-indent: 200%;
+    font-size: .1rem;
+    color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("images/logo.png"); }
+  @media screen and (min-width: 1024px) {
+    .header-title {
+      height: 240px; } }
+
+.site-content {
+  text-align: center; }
+
+.content-title {
+  padding: 2rem 0; }
+  .content-title .title {
+    margin: 0;
+    font-size: 2.5rem; }
+  .content-title p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300; }
+
+.qr .item {
+  margin: 1rem; }
+
+.qr .items-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.qr .item {
+  width: 258px; }
+  .qr .item .category {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white; }
+  .qr .item-image img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 258px;
+    object-fit: cover; }
+  .qr .item-qr-wrapper {
+    position: relative;
+    width: 100%;
+    height: 258px;
+    margin-top: 1rem;
+    border: 12px solid white;
+    box-sizing: border-box;
+    transition: all .5s; }
+  .qr .item-qr {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .qr .item-ticket {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.125rem;
+    color: black;
+    background-color: white;
+    opacity: 0;
+    overflow: hidden; }
+    .qr .item-ticket p {
+      margin: 0; }
+      .qr .item-ticket p small {
+        font-size: .75em; }
+      .qr .item-ticket p em {
+        font-style: normal;
+        color: #ca0828; }
+    .qr .item-ticket strong {
+      font-weight: 700;
+      color: #ca0828; }
+  .qr .item.selected .item-qr-wrapper {
+    border-radius: 10px; }
+  .qr .item.selected .item-ticket {
+    display: flex;
+    opacity: 1; }
+
+.qr .ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase; }
+  .qr .ticket svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    fill: #ca0828; }
+
+@media screen and (min-width: 1024px) {
+  .qr .item {
+    margin: 0 3rem; } }
+
+.action-links {
+  padding: 2rem 1rem;
+  font-size: 1.25rem;
+  color: white; }
+  .action-links a {
+    display: inline-block;
+    padding: .5rem 3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    color: #ca0828;
+    background-color: #FFF302;
+    transition: all .5s; }
+    .action-links a:hover, .action-links a:focus {
+      background-color: white;
+      color: black; }
+  @media screen and (min-width: 1024px) {
+    .action-links {
+      display: none; } }

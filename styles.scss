@@ -1,0 +1,226 @@
+// Base
+// ------------------------------------------------------------
+
+@import "sass/fonts";
+@import "sass/settings";
+@import "sass/mixins";
+@import "sass/effects";
+@import "sass/base";
+
+// Styles
+// ------------------------------------------------------------
+
+body {
+    position: relative;
+    color: $color-over-primary;
+    background-color: $primary-color;
+
+    &:before,
+    &:after { 
+        content: ""; 
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &:before {
+        height: 480px;
+        background: linear-gradient(to bottom, $secondary-color 0%, $secondary-color 50%, $primary-color 100%);
+    }
+
+    &:after {
+        height: 100%;
+        background: {
+            image: url(images/bg-footer.png);
+            repeat: no-repeat;
+            position: center bottom;
+            size: 100% auto;
+        }
+    }
+}
+
+.site-header {
+    &:before { 
+        content: ""; 
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: {
+            image: url(images/bg-white.png);
+            repeat: no-repeat;
+            position: center top;
+            size: 100% auto;
+        }
+    }
+}
+
+.header-title {
+    @include flex-all($justify: center, $align: center);
+    @include width-constrain(320px);
+    height: 115px;
+    background-color: $primary-color;
+
+    &__link { @include image-replace($footer-logo-width, $footer-logo-height, $header-logo-image); }
+
+    @include respond-to($vp-large) { height: 240px; }
+}
+
+.site-content {
+    text-align: center;
+}
+
+.content-title {
+    padding: 2rem 0;
+
+    .title {  
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    p { 
+        margin: 0;
+        font: {
+            size: 1.5rem;
+            weight: 300;
+        }
+    }
+}
+
+.qr {
+    .item { margin: 1rem; }
+
+    .items-list {
+        @include flex-all($justify: center, $wrap: wrap);
+        @include stripped-list;
+    }
+
+    .item {
+        width: 258px;
+
+        .category {
+            margin: 0 0 1rem;
+            font: {
+                size: 1.25rem;
+                weight: 700;
+            }
+            color: $color-over-primary;
+        }
+
+        &-image {
+            img {
+                display: block;
+                max-width: 100%;
+                width: 100%;
+                height: 258px;
+                object-fit: cover;
+            }
+        }
+
+        &-qr-wrapper {
+            position: relative;
+            width: 100%;
+            height: 258px;
+            margin-top: 1rem;
+            border: 12px solid $c-white;
+            box-sizing: border-box;
+            transition: all .5s;
+        }
+
+        &-qr {
+            width: 100%;
+            height: 100%;
+            @include bg-cover;
+        }
+
+        &-ticket {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 1.125rem;
+            color: $c-black;
+            background-color: $c-white;
+            opacity: 0;
+            overflow: hidden;
+
+            p { 
+                margin: 0; 
+
+                small { font-size: .75em; }
+
+                em {
+                    font-style: normal;
+                    color: $primary-color;
+                }
+            }
+
+            strong {
+                font-weight: 700;
+                color: $primary-color;
+            }
+        }
+
+        &.selected {
+            .item-qr-wrapper { border-radius: 10px; }
+
+            .item-ticket {
+                display: flex;
+                opacity: 1;
+            }
+        }
+    }
+
+    .ticket {
+        @include flex-all($justify: center, $align: center);
+        margin: 2rem 0;
+        font: {
+            size: 2.5rem;
+            weight: 900;
+        }
+        text-transform: uppercase;
+
+        svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            fill: $primary-color;
+        }
+    }
+
+    @include respond-to($vp-large) {
+        .item { margin: 0 3rem; }
+    }
+}
+
+.action-links {
+    padding: 2rem 1rem;
+    font-size: 1.25rem;
+    color: $color-over-primary;
+
+    a {
+        display: inline-block;
+        padding: .5rem 3rem;
+        text-decoration: none;
+        border-radius: 50px;
+        border: 5px solid rgba($color-over-primary, .2);
+        color: $primary-color;
+        background-color: #FFF302;
+        transition: all .5s;
+
+        @include hover-bg-color($c-white, $c-black); 
+    }
+
+    @include respond-to($vp-large) { display: none; }
+}
+ 

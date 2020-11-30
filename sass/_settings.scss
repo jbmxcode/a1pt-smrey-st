@@ -1,0 +1,53 @@
+// Responsive
+
+$vp-small				: 320px;	// small size 
+$vp-mid					: 768px;	// mid size
+$vp-large				: 1024px;	// large size
+
+$vp-max					: 1350px;	// max viewport
+
+$site-width				: $vp-large;
+
+// Logos Sizes
+
+$header-logo-height		: 125px;
+$header-logo-width		: 176px;
+$footer-logo-height		: 125px;
+$footer-logo-width		: 176px;
+
+// Colors
+
+$c-white                : rgb(255,255,255);
+$c-black                : rgb(0,0,0);
+$c-grey                 : rgb(62, 62, 62);
+$c-grey-light           : rgb(248, 248, 252);
+$c-grey-light2          : rgb(212, 210, 230);
+$c-text                 : rgb(23, 36, 42);
+
+$primary-color			: rgb(202, 8, 40);
+$color-over-primary		: $c-white;
+
+$secondary-color		: rgb(148, 8, 31);
+$color-over-secondary	: $c-white;
+
+// Social Colors
+
+$facebook				: rgb(24,119,242);
+$twitter				: rgb(29,161,242);
+$youtube				: rgb(255,0,0);
+$instagram				: rgb(215,53,118);
+
+// Logos Images
+
+$header-logo-image			: "images/logo.png";
+$footer-logo-image			: $header-logo-image;
+
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+$primary-font			    : Helvetica, Arial, sans-serif;
+
+$base-font-size			    : 16px;
+
