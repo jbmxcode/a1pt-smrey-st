@@ -173,9 +173,9 @@ body {
     margin-right: 1rem;
     fill: #ca0828; }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1350px) {
   .qr .item {
-    margin: 0 3rem; } }
+    margin: 0 3rem 1rem; } }
 
 .action-links {
   padding: 2rem 1rem;

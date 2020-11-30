@@ -198,8 +198,8 @@ body {
         }
     }
 
-    @include respond-to($vp-large) {
-        .item { margin: 0 3rem; }
+    @include respond-to($vp-max) {
+        .item { margin: 0 3rem 1rem; }
     }
 }
 
