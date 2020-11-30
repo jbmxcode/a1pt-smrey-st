@@ -1,0 +1,19 @@
+{
+  "name": "a1pt-smrey-st",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmxworld/a1pt-smrey-st.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbmxworld/a1pt-smrey-st/issues"
+  },
+  "homepage": "https://github.com/jbmxworld/a1pt-smrey-st#readme"
+}
